@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @FeignClient(name="measurementClient" , url = "http://localhost:8080")
 public interface MeasurementClient {
 
-    @RequestMapping(method = RequestMethod.POST, value = "/api/measurements")
+    @RequestMapping(method = RequestMethod.POST, value = "/measurements")
     @Headers("Content-Type: application/json")
     void create(MeasurementDto dto);
 }
